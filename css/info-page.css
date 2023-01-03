@@ -55,16 +55,17 @@ body {
 		width: 100%;
 	}
 
-	video {
-		/*height: 20%;*/
+	#design-guide-video {
+		height: 250px;
 	}
 
 }
 
 
-
-
-
+#design-guide-video {
+	border-radius:20px; 
+	border:0px; 
+}
 
 a {
 	color: black;

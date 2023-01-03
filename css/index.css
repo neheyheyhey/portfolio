@@ -38,6 +38,12 @@ html, body {
 	#cards > div:last-child {
 		padding-right: 3em;
 	}
+
+	#nav > #nav-buttons {
+		margin-top: -4vh;
+  		justify-content: space-between;
+  		align-items: center;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -58,6 +64,13 @@ html, body {
 
 	#scroll-helper, #scroll-left-detector, #scroll-right-detector {
 		display:none;
+	}
+
+	#nav > #nav-buttons {
+		margin-top: 10px;
+  		justify-content: center;
+  		align-items: center;
+  		gap: 20px;
 	}
 }
 
@@ -196,30 +209,34 @@ html, body {
 	position: absolute;
 	z-index: 99;
 	width: 94vw;
-	display: flex;
-  	justify-content: space-between;
-  	align-items: center;
   	background-color: rgba(255,255,255,0.5);
   	backdrop-filter: blur(10px);
 }
-#nav > a {
+
+#nav > #nav-buttons {
+	display: flex;
+}
+
+#nav > #nav-buttons > a {
 	right: 3vw;
 	text-decoration: none;
 	z-index: 100;
 	color: black;
 	font-size: 0.8em;
-	/*position: fixed;*/
-	/*background-color: white;*/
 	padding: 10px;
 	border: 1px solid black;
 	border-radius: 3px;
-	/*float: left;*/
-	/*margin: 0px 10px;*/
 }
-#nav > a:hover {
-	/*background: linear-gradient(90deg, rgba(255,255,99,0.3) 0%, rgba(255,210,184,0.3) 60%, rgba(255,186,71,0.3) 100%);*/
+
+#nav > #nav-buttons > a:hover {
 	color: #e63153;
 	border-color: #e63153;
+}
+#nav > #name {
+	top: 4vh;
+	display: flex;
+  	justify-content: center;
+  	align-items: center;
 }
 #nav > div > span {
 	font-family: "SilkSerif-Bold";
@@ -233,24 +250,3 @@ html, body {
 #name {
 	display: flex;
 }
-/*#nav > #scroll-helper {
-	font-size: 0.8em;
-	text-transform: uppercase;
-	letter-spacing: 1.5px;	
-	background-color: rgba(255,255,255,1);
-	padding: 10px;
-}
-#nav > #warning {
-	left: 30vw;
-	width:40vw;
-	text-align: center;
-	font-size: 0.8em;
-	position: fixed;
-	background-color: rgba(255,255,255,1);
-	padding: 10px;
-}
-#warning > span {
-	background-color: rgba(255, 169, 58, 0.2);
-	border-radius: 10px;
-	padding: 10px 20px;
-}*/
