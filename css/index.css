@@ -27,7 +27,7 @@ html, body {
 		display: table-cell;
 		vertical-align: middle;
 		text-align: center;
-		height: 100%;
+		width: 100vw;
 		box-sizing: border-box;
 	}
 	
@@ -41,10 +41,23 @@ html, body {
 }
 
 @media screen and (max-width: 500px) {
+	
 	#cards > div {
 		text-align: center;
 		margin-top: 1em;
 		margin-bottom: 1em;
+	}
+
+	#cards > div:first-child {
+		padding-top: 3em;
+	}
+
+	#cards > div:last-child {
+		padding-bottom: 3em;
+	}
+
+	#scroll-helper, #scroll-left-detector, #scroll-right-detector {
+		display:none;
 	}
 }
 
@@ -83,7 +96,6 @@ html, body {
 	left: 0;
 	width: 100vw;
 	background-color: rgba(255,255,255,0.05);
-
 	text-align: center;
 	font-size: 1.3em;
 }
@@ -180,9 +192,15 @@ html, body {
 }
 
 #nav {
-	margin-top: 5vh;
+	padding: 4vh 4vw;
 	position: absolute;
 	z-index: 99;
+	width: 94vw;
+	display: flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	background-color: rgba(255,255,255,0.5);
+  	backdrop-filter: blur(10px);
 }
 #nav > a {
 	right: 3vw;
@@ -190,16 +208,35 @@ html, body {
 	z-index: 100;
 	color: black;
 	font-size: 0.8em;
-	position: fixed;
-	background-color: rgba(255,255,255,1);
+	/*position: fixed;*/
+	/*background-color: white;*/
 	padding: 10px;
+	border: 1px solid black;
+	border-radius: 3px;
+	/*float: left;*/
+	/*margin: 0px 10px;*/
 }
-#nav > #scroll-helper {
-	left: 3vw;
+#nav > a:hover {
+	/*background: linear-gradient(90deg, rgba(255,255,99,0.3) 0%, rgba(255,210,184,0.3) 60%, rgba(255,186,71,0.3) 100%);*/
+	color: #e63153;
+	border-color: #e63153;
+}
+#nav > div > span {
+	font-family: "SilkSerif-Bold";
+	font-size: 1.5em;
+	vertical-align: text-top;
+}
+#nav > div > img {
+	height: 2em;
+	margin-right: 15px;
+}
+#name {
+	display: flex;
+}
+/*#nav > #scroll-helper {
 	font-size: 0.8em;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;	
-	position: fixed;
 	background-color: rgba(255,255,255,1);
 	padding: 10px;
 }
@@ -208,8 +245,6 @@ html, body {
 	width:40vw;
 	text-align: center;
 	font-size: 0.8em;
-	/*text-transform: uppercase;*/
-	/*letter-spacing: 1.5px;	*/
 	position: fixed;
 	background-color: rgba(255,255,255,1);
 	padding: 10px;
@@ -218,4 +253,4 @@ html, body {
 	background-color: rgba(255, 169, 58, 0.2);
 	border-radius: 10px;
 	padding: 10px 20px;
-}
+}*/
